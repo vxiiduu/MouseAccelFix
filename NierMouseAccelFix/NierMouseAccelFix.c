@@ -49,7 +49,6 @@ DLLAPI BOOL WINAPI DllMain(
 			MessageBoxA(NULL, "Failed to set hook procedure", "NierMouseAccelFix", MB_ICONEXCLAMATION | MB_OK);
 		} else {
 			NewMouseSpeed = GetPrivateProfileIntA("MouseAccelFix", "Sensitivity", 10, ".\\MouseAccelFix.ini");
-			SetSpecialMouseSettings(TRUE);
 		}
 	} else if (dwReason == DLL_PROCESS_DETACH) {
 		SetSpecialMouseSettings(FALSE);
